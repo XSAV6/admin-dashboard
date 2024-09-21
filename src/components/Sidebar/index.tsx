@@ -3,10 +3,10 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import SidebarItem from "@/components/Sidebar/SidebarItem";
 import ClickOutside from "@/components/ClickOutside";
 import useLocalStorage from "@/hooks/useLocalStorage";
+import Image from "next/image";
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -41,9 +41,7 @@ const menuGroups = [
         ),
         label: "Dashboard",
         route: "#",
-        children: [
-          { label: "eCommerce", route: "/" },
-        ],
+        children: [{ label: "eCommerce", route: "/" }],
       },
       {
         icon: (
@@ -162,9 +160,7 @@ const menuGroups = [
         ),
         label: "Tables",
         route: "#",
-        children: [
-          { label: "Tables", route: "/tables" },
-        ],
+        children: [{ label: "Tables", route: "/tables" }],
       },
       {
         icon: (
@@ -186,9 +182,7 @@ const menuGroups = [
         ),
         label: "Pages",
         route: "#",
-        children: [
-          { label: "Settings", route: "/pages/settings" },
-        ],
+        children: [{ label: "Settings", route: "/pages/settings" }],
       },
     ],
   },
@@ -219,9 +213,7 @@ const menuGroups = [
         ),
         label: "Charts",
         route: "#",
-        children: [
-          { label: "Basic Chart", route: "/charts/basic-chart" },
-        ],
+        children: [{ label: "Basic Chart", route: "/charts/basic-chart" }],
       },
       {
         icon: (
@@ -288,9 +280,7 @@ const menuGroups = [
         ),
         label: "Authentication",
         route: "#",
-        children: [
-          { label: "Sign In", route: "/auth/signin" },
-        ],
+        children: [{ label: "Sign In", route: "/auth/signin" }],
       },
     ],
   },
@@ -318,7 +308,6 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               height={32}
               src={"/images/logo/logo-dark.svg"}
               alt="Logo"
-              priority
               className="dark:hidden"
               style={{ width: "auto", height: "auto" }}
             />
@@ -327,7 +316,6 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               height={32}
               src={"/images/logo/logo.svg"}
               alt="Logo"
-              priority
               className="hidden dark:block"
               style={{ width: "auto", height: "auto" }}
             />
